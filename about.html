@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>About Me | Nexlify</title>
+        <script src="assets/css/tailwind.min.js"></script>
+        <link href="assets/css/icons.css" rel="stylesheet" />
+        <link href="assets/css/fonts.css" rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "surface-container": "#1d2022",
+                                                "surface": "#101415",
+                                                "on-tertiary-container": "#b32eff",
+                                                "on-background": "#e0e3e5",
+                                                "tertiary-container": "#10001d",
+                                                "surface-bright": "#363a3b",
+                                                "error-container": "#93000a",
+                                                "secondary": "#d3fbff",
+                                                "on-primary-fixed-variant": "#44474b",
+                                                "surface-tint": "#c5c6cb",
+                                                "primary": "#c5c6cb",
+                                                "on-tertiary-fixed": "#30004b",
+                                                "on-secondary": "#00363a",
+                                                "on-primary-fixed": "#191c1f",
+                                                "on-primary-container": "#76787d",
+                                                "on-surface-variant": "#c6c6ca",
+                                                "inverse-on-surface": "#2d3133",
+                                                "surface-container-high": "#272a2c",
+                                                "secondary-container": "#00eefc",
+                                                "primary-fixed-dim": "#c5c6cb",
+                                                "on-error": "#690005",
+                                                "secondary-fixed": "#7df4ff",
+                                                "on-secondary-fixed": "#002022",
+                                                "on-primary": "#2e3134",
+                                                "tertiary-fixed": "#f5d9ff",
+                                                "tertiary": "#e5b4ff",
+                                                "surface-dim": "#101415",
+                                                "surface-variant": "#323537",
+                                                "surface-container-lowest": "#0b0f10",
+                                                "on-tertiary-fixed-variant": "#7000a7",
+                                                "primary-container": "#05070a",
+                                                "primary-fixed": "#e1e2e7",
+                                                "inverse-surface": "#e0e3e5",
+                                                "on-secondary-container": "#00686f",
+                                                "error": "#ffb4ab",
+                                                "surface-container-highest": "#323537",
+                                                "outline-variant": "#45474a",
+                                                "inverse-primary": "#5c5e63",
+                                                "surface-container-low": "#191c1e",
+                                                "on-error-container": "#ffdad6",
+                                                "background": "#05070a",
+                                                "on-secondary-fixed-variant": "#004f54",
+                                                "secondary-fixed-dim": "#00dbe9",
+                                                "on-tertiary": "#4f0077",
+                                                "on-surface": "#e0e3e5",
+                                                "tertiary-fixed-dim": "#e5b4ff",
+                                                "outline": "#8f9195"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "margin-desktop": "80px",
+                                                "unit": "8px",
+                                                "margin-mobile": "24px",
+                                                "gutter": "32px",
+                                                "container-max": "1440px"
+                                        },
+                                        "fontFamily": {
+                                                "headline-lg-mobile": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "body-md": [
+                                                        "Inter"
+                                                ],
+                                                "display-xl-mobile": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "label-sm": [
+                                                        "Inter"
+                                                ],
+                                                "headline-lg": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "display-xl": [
+                                                        "Plus Jakarta Sans"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "headline-lg-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "letterSpacing": "0em",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "display-xl-mobile": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "1.1",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "800"
+                                                        }
+                                                ],
+                                                "label-sm": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "1",
+                                                                "letterSpacing": "0.1em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "display-xl": [
+                                                        "80px",
+                                                        {
+                                                                "lineHeight": "1.1",
+                                                                "letterSpacing": "-0.04em",
+                                                                "fontWeight": "800"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                @keyframes spin-slow {
+                        from {
+                                transform: rotate(0deg);
+                        }
+
+                        to {
+                                transform: rotate(360deg);
+                        }
+                }
+
+                .animate-spin-slow {
+                        animation: spin-slow 20s linear infinite;
+                }
+
+                @keyframes float {
+
+                        0%,
+                        100% {
+                                transform: translateY(0);
+                        }
+
+                        50% {
+                                transform: translateY(-20px);
+                        }
+                }
+
+                .animate-float {
+                        animation: float 6s ease-in-out infinite;
+                }
+
+                @keyframes float-delayed {
+
+                        0%,
+                        100% {
+                                transform: translateY(0);
+                        }
+
+                        50% {
+                                transform: translateY(-15px);
+                        }
+                }
+
+                .animate-float-delayed {
+                        animation: float-delayed 8s ease-in-out infinite 2s;
+                }
+        </style>
+        <style>
+                .scroll-reveal {
+                        opacity: 0;
+                        transform: translateY(40px);
+                        transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                }
+
+                .scroll-reveal.visible {
+                        opacity: 1;
+                        transform: translateY(0);
+                }
+        </style>
+</head>
+
+<body class="bg-background text-on-background antialiased selection:bg-secondary-fixed/30 selection:text-secondary-fixed relative overflow-x-hidden min-h-screen"
+        data-mode="connect">
+        <!-- Futuristic Background -->
+        <div
+                class="fixed inset-0 z-[-1] pointer-events-none bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-950/40 via-background to-background">
+                <div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-secondary-fixed-dim/10 blur-[120px] animate-pulse"
+                        style="animation-duration: 8s;"></div>
+                <div class="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-tertiary-fixed-dim/10 blur-[150px] animate-pulse"
+                        style="animation-duration: 12s;"></div>
+                <div class="absolute top-[40%] left-[60%] w-[40vw] h-[40vw] rounded-full bg-blue-900/10 blur-[120px]">
+                </div>
+                <!-- Floating Geometric Shapes -->
+                <div
+                        class="absolute top-[20%] right-[15%] w-32 h-32 border border-secondary-fixed-dim/20 rounded-full animate-spin-slow">
+                </div>
+                <div
+                        class="absolute top-[60%] left-[10%] w-24 h-24 border border-tertiary-fixed-dim/20 rotate-45 animate-float">
+                </div>
+                <div
+                        class="absolute bottom-[10%] left-[30%] w-16 h-16 border border-white/10 rounded-full animate-float-delayed">
+                </div>
+        </div>
+        <!-- TopNavBar -->
+        <nav
+                class="bg-white/5 backdrop-blur-3xl sticky top-0 w-full z-50 border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+                <div
+                        class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+                        <a class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold tracking-tighter text-on-surface"
+                                href="index.html">Nexlify</a>
+                        <div class="hidden md:flex items-center gap-8">
+                                <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-body-md text-body-md hover:translate-y-[-2px] hover:text-secondary transition-all duration-300"
+                                        href="index.html">Work</a>
+                                <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-body-md text-body-md hover:translate-y-[-2px] hover:text-secondary transition-all duration-300"
+                                        href="services.html">Services</a>
+                                <a class="text-secondary-fixed-dim font-bold border-b-2 border-secondary-fixed-dim pb-1 font-body-md text-body-md scale-95 duration-200 ease-in-out glow-text"
+                                        href="about.html">About Me</a>
+                                <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-body-md text-body-md hover:translate-y-[-2px] hover:text-secondary transition-all duration-300"
+                                        href="contact.html">Contact</a>
+                        </div>
+                        <button
+                                class="hidden md:inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary-fixed-dim to-tertiary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm font-bold tracking-widest shadow-[0_0_20px_rgba(0,219,233,0.3)] hover:shadow-[0_0_40px_rgba(0,219,233,0.6)] transition-all duration-300 hover:-translate-y-1">
+                                Inquire Now
+                        </button>
+                        <button class="md:hidden text-on-surface p-2 hover:text-secondary-fixed-dim transition-colors"
+                                id="mobile-menu-btn">
+                                <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">menu</span>
+                        </button>
+                </div>
+        </nav>
+        <main>
+                <!-- Hero Section -->
+                <section
+                        class="scroll-reveal relative pt-40 pb-48 px-margin-mobile md:px-margin-desktop overflow-hidden max-w-container-max mx-auto">
+                        <div class="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
+                                <h1
+                                        class="scroll-reveal font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-on-surface mb-8 tracking-tighter">
+                                        Crafting the Future of <br class="hidden md:block" />
+                                        <span
+                                                class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-fixed-dim to-tertiary-fixed-dim drop-shadow-[0_0_20px_rgba(229,180,255,0.3)]">Digital
+                                                Artistry</span>
+                                </h1>
+                                <p
+                                        class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed text-lg font-light">
+                                        We are a boutique digital atelier. We don't just build websites; we sculpt
+                                        digital experiences that merge avant-garde aesthetics with uncompromising
+                                        technological precision. Our approach is bespoke, treating every project as a
+                                        unique masterpiece tailored for the high-end landscape.
+                                </p>
+                        </div>
+                </section>
+                <!-- The Vision & Mission (Glass Cards) -->
+                <section
+                        class="scroll-reveal py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                                <!-- Vision Card -->
+                                <div
+                                        class="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl p-12 relative overflow-hidden group hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,219,233,0.15)] hover:border-secondary-fixed-dim/30 transition-all duration-500 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+                                        <div
+                                                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-white/20 to-transparent">
+                                        </div>
+                                        <div
+                                                class="absolute top-0 left-0 w-1/2 h-full bg-secondary-fixed-dim/5 blur-[80px] group-hover:bg-secondary-fixed-dim/15 transition-colors duration-500">
+                                        </div>
+                                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-6 block drop-shadow-[0_0_10px_rgba(0,219,233,0.5)]"
+                                                style="font-variation-settings: 'FILL' 1;">visibility</span>
+                                        <h3
+                                                class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-4 md:text-5xl font-bold tracking-tight">
+                                                The Vision</h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                                To architect digital spaces that transcend utility, becoming immersive
+                                                brand sanctuaries. We envision a web where luxury is felt through every
+                                                micro-interaction and space is treated as the ultimate premium asset.
+                                        </p>
+                                </div>
+                                <!-- Mission Card -->
+                                <div
+                                        class="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl p-12 relative overflow-hidden group hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(229,180,255,0.15)] hover:border-tertiary-fixed-dim/30 transition-all duration-500 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+                                        <div
+                                                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-white/20 to-transparent">
+                                        </div>
+                                        <div
+                                                class="absolute top-0 right-0 w-1/2 h-full bg-tertiary-fixed-dim/5 blur-[80px] group-hover:bg-tertiary-fixed-dim/15 transition-colors duration-500">
+                                        </div>
+                                        <span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-6 block drop-shadow-[0_0_10px_rgba(229,180,255,0.5)]"
+                                                style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+                                        <h3
+                                                class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-4 md:text-5xl font-bold tracking-tight">
+                                                The Mission</h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                                To elevate digital standards by marrying robust engineering with
+                                                breathtaking design. We obsess over the minutiae, ensuring that our
+                                                creations are as performant as they are visually arresting.
+                                        </p>
+                                </div>
+                        </div>
+                </section>
+                <!-- Leadership Section -->
+                <section class="scroll-reveal py-40 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                        <div class="text-center mb-24">
+                                <h2
+                                        class="scroll-reveal font-display-xl-mobile text-display-xl-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-6 font-bold tracking-tight">
+                                        Hello!...I am SHUBHRANSU BEHERA</h2>
+                                <div
+                                        class="h-1 w-24 bg-gradient-to-r from-secondary-fixed-dim to-tertiary-fixed-dim mx-auto rounded-full shadow-[0_0_15px_rgba(0,219,233,0.5)]">
+                                </div>
+                        </div>
+                        <div class="mx-auto max-w-5xl">
+                                <div
+                                        class="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-3xl overflow-hidden flex flex-col items-center gap-8 md:gap-12 relative group p-16 md:p-24 md:py-32 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] hover:shadow-[0_12px_50px_rgba(0,219,233,0.1)] hover:border-white/20 transition-all duration-700">
+                                        <!-- Decorative Background Glow -->
+                                        <div
+                                                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-white/20 via-white/40 to-transparent">
+                                        </div>
+                                        <div
+                                                class="absolute -bottom-32 -right-32 w-96 h-96 bg-secondary-fixed-dim/10 blur-[120px] rounded-full group-hover:bg-secondary-fixed-dim/20 transition-colors duration-700">
+                                        </div>
+                                        <div
+                                                class="absolute -top-32 -left-32 w-96 h-96 bg-tertiary-fixed-dim/10 blur-[120px] rounded-full group-hover:bg-tertiary-fixed-dim/20 transition-colors duration-700">
+                                        </div>
+                                        <!-- Content -->
+                                        <div
+                                                class="flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10 text-center md:text-left">
+                                                <!-- Image Column -->
+                                                <div class="w-full md:w-1/3 flex justify-center scroll-reveal">
+                                                        <img src="shubh.png" alt="Shubhransu Behera"
+                                                                class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-full border-4 border-secondary-fixed-dim/30 shadow-[0_0_30px_rgba(0,219,233,0.3)] hover:scale-105 transition-transform duration-500">
+                                                </div>
+                                                <!-- Text Column -->
+                                                <div
+                                                        class="w-full md:w-2/3 flex flex-col items-center md:items-start scroll-reveal">
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-widest mb-2 drop-shadow-[0_0_8px_rgba(0,219,233,0.4)]">Founder
+                                                                &amp; Lead Visionary</span>
+                                                        <h3
+                                                                class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-6 md:text-5xl font-bold tracking-tighter whitespace-nowrap">
+                                                                Shubhransu Behera</h3>
+                                                        <div
+                                                                class="h-[1px] w-16 bg-secondary-fixed-dim/50 mb-6 mx-auto md:mx-0">
+                                                        </div>
+                                                        <div class="flex flex-col gap-6 text-center md:text-left">
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant break-words whitespace-normal leading-[1.8] font-light">
+                                                                        <strong class="text-on-surface font-semibold">Hello,
+                                                                                I'm Shubhransu Behera</strong> — a
+                                                                        B.Tech graduate in Computer Science &amp;
+                                                                        Information Technology and a passionate website
+                                                                        designer and developer based in Bhubaneswar,
+                                                                        Odisha.
+                                                                </p>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant break-words whitespace-normal leading-[1.8] font-light">
+                                                                        I started building websites because I saw a real
+                                                                        problem — local businesses in India have huge
+                                                                        potential, but most of them have zero online
+                                                                        presence holding them back. That's where I come
+                                                                        in. My goal isn't just to make your website look
+                                                                        good — it's to <strong
+                                                                                class="text-on-surface font-semibold">grow
+                                                                                your business 10x</strong> through smart
+                                                                        design, fast performance, and a digital presence
+                                                                        that actually converts visitors into customers.
+                                                                </p>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant break-words whitespace-normal leading-[1.8] font-light">
+                                                                        Beyond web development, I'm deeply interested in
+                                                                        <strong class="text-on-surface font-semibold">
+                                                                                entrepreneurship, content
+                                                                                creation</strong>, and everything
+                                                                        happening at the edge of technology. I believe
+                                                                        great design is not decoration — it's strategy.
+                                                                </p>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant break-words whitespace-normal leading-[1.8] font-light">
+                                                                        When I'm not building websites, I'm studying
+                                                                        successful businesses, creating content, and
+                                                                        constantly learning what makes digital products
+                                                                        truly work in the real world.</p>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant break-words whitespace-normal leading-[1.8] text-secondary-fixed-dim font-medium">
+                                                                        <strong class="font-semibold">If you have a
+                                                                                business idea or an existing brand that
+                                                                                deserves better online — let's build
+                                                                                something great together.</strong>
+                                                                </p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Core Values -->
+                <section
+                        class="scroll-reveal py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+                        <div
+                                class="absolute inset-0 z-0 opacity-10 pointer-events-none flex justify-center items-center">
+                                <div class="w-[80%] h-[80%] rounded-full bg-blue-900 blur-[150px]"></div>
+                        </div>
+                        <h2
+                                class="scroll-reveal font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-center text-on-surface mb-20 relative z-10 font-bold tracking-tight">
+                                Core Ethos</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+                                <!-- Value 1 -->
+                                <div
+                                        class="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-10 flex flex-col items-center justify-center text-center hover:bg-white/10 hover:border-secondary-fixed-dim/40 hover:shadow-[0_8px_30px_rgba(0,219,233,0.2)] hover:-translate-y-2 transition-all duration-500 group shadow-[0_4px_20px_0_rgba(0,0,0,0.2)]">
+                                        <div
+                                                class="w-20 h-20 rounded-full bg-secondary-fixed-dim/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-secondary-fixed-dim/20 transition-all duration-500 shadow-[0_0_15px_rgba(0,219,233,0.1)] group-hover:shadow-[0_0_25px_rgba(0,219,233,0.4)]">
+                                                <span class="material-symbols-outlined text-secondary-fixed-dim text-3xl drop-shadow-[0_0_8px_rgba(0,219,233,0.5)]"
+                                                        style="font-variation-settings: 'FILL' 1;">architecture</span>
+                                        </div>
+                                        <span
+                                                class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest font-bold">Precision</span>
+                                </div>
+                                <!-- Value 2 -->
+                                <div
+                                        class="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-10 flex flex-col items-center justify-center text-center hover:bg-white/10 hover:border-tertiary-fixed-dim/40 hover:shadow-[0_8px_30px_rgba(229,180,255,0.2)] hover:-translate-y-2 transition-all duration-500 group shadow-[0_4px_20px_0_rgba(0,0,0,0.2)]">
+                                        <div
+                                                class="w-20 h-20 rounded-full bg-tertiary-fixed-dim/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-tertiary-fixed-dim/20 transition-all duration-500 shadow-[0_0_15px_rgba(229,180,255,0.1)] group-hover:shadow-[0_0_25px_rgba(229,180,255,0.4)]">
+                                                <span class="material-symbols-outlined text-tertiary-fixed-dim text-3xl drop-shadow-[0_0_8px_rgba(229,180,255,0.5)]"
+                                                        style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                                        </div>
+                                        <span
+                                                class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest font-bold">Innovation</span>
+                                </div>
+                                <!-- Value 3 -->
+                                <div
+                                        class="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-10 flex flex-col items-center justify-center text-center hover:bg-white/10 hover:border-secondary-fixed-dim/40 hover:shadow-[0_8px_30px_rgba(0,219,233,0.2)] hover:-translate-y-2 transition-all duration-500 group shadow-[0_4px_20px_0_rgba(0,0,0,0.2)]">
+                                        <div
+                                                class="w-20 h-20 rounded-full bg-secondary-fixed-dim/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-secondary-fixed-dim/20 transition-all duration-500 shadow-[0_0_15px_rgba(0,219,233,0.1)] group-hover:shadow-[0_0_25px_rgba(0,219,233,0.4)]">
+                                                <span class="material-symbols-outlined text-secondary-fixed-dim text-3xl drop-shadow-[0_0_8px_rgba(0,219,233,0.5)]"
+                                                        style="font-variation-settings: 'FILL' 1;">favorite</span>
+                                        </div>
+                                        <span
+                                                class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest font-bold">Empathy</span>
+                                </div>
+                                <!-- Value 4 -->
+                                <div
+                                        class="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-10 flex flex-col items-center justify-center text-center hover:bg-white/10 hover:border-tertiary-fixed-dim/40 hover:shadow-[0_8px_30px_rgba(229,180,255,0.2)] hover:-translate-y-2 transition-all duration-500 group shadow-[0_4px_20px_0_rgba(0,0,0,0.2)]">
+                                        <div
+                                                class="w-20 h-20 rounded-full bg-tertiary-fixed-dim/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-tertiary-fixed-dim/20 transition-all duration-500 shadow-[0_0_15px_rgba(229,180,255,0.1)] group-hover:shadow-[0_0_25px_rgba(229,180,255,0.4)]">
+                                                <span class="material-symbols-outlined text-tertiary-fixed-dim text-3xl drop-shadow-[0_0_8px_rgba(229,180,255,0.5)]"
+                                                        style="font-variation-settings: 'FILL' 1;">diamond</span>
+                                        </div>
+                                        <span
+                                                class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest font-bold">Mastery</span>
+                                </div>
+                        </div>
+                </section>
+                <!-- Our Workspace -->
+                <section class="scroll-reveal py-40 relative overflow-hidden border-t border-b border-white/10 my-32">
+                        <div class="absolute inset-0 z-0">
+                                <img alt="Futuristic Studio Workspace"
+                                        class="object-cover w-full h-full opacity-20 mix-blend-luminosity"
+                                        data-alt="A wide, sweeping shot of an ultra-modern, high-tech creative design studio interior. The aesthetic is sleek, minimalist, and dark-mode inspired. The room is illuminated by ambient, indirect neon lighting in cyan and deep purple hues. There are high-end glass desks, large floating holographic-style monitors, and polished concrete floors that reflect the colored lights. The atmosphere feels like an advanced, futuristic laboratory of creativity."
+                                        src="assets/images/avatar_about.jpg" />
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-r from-background/95 to-indigo-950/40 backdrop-blur-sm">
+                                </div>
+                        </div>
+                        <div
+                                class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full flex flex-col justify-center">
+                                <div
+                                        class="max-w-2xl bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-12 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+                                        <span
+                                                class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-widest mb-6 block drop-shadow-[0_0_8px_rgba(0,219,233,0.5)]">Our
+                                                Workspace</span>
+                                        <h2
+                                                class="scroll-reveal font-display-xl-mobile text-display-xl-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-8 font-bold tracking-tight">
+                                                The Laboratory of Creativity</h2>
+                                        <p
+                                                class="font-body-md text-body-md text-on-surface-variant text-lg leading-relaxed font-light">
+                                                Ideas require the right environment to flourish. Our studio is designed
+                                                to eliminate friction and foster pure innovation. It is a space where
+                                                dark mode meets illuminated thought, ensuring every pixel we place is
+                                                intentional.
+                                        </p>
+                                </div>
+                        </div>
+                </section>
+                <!-- CTA Section -->
+                <section
+                        class="scroll-reveal py-40 px-margin-mobile md:px-margin-desktop text-center max-w-3xl mx-auto relative z-10">
+                        <h2
+                                class="scroll-reveal font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-on-surface mb-8 font-bold tracking-tighter">
+                                Ready to <span
+                                        class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-fixed-dim to-tertiary-fixed-dim drop-shadow-[0_0_20px_rgba(229,180,255,0.4)]">Begin?</span>
+                        </h2>
+                        <p
+                                class="font-body-md text-body-md text-on-surface-variant mb-16 text-xl leading-relaxed font-light">
+                                Let us sculpt your next digital masterpiece. Connect with us to discuss how we can
+                                elevate your brand's digital presence to unprecedented heights.
+                        </p>
+                        <button
+                                class="inline-flex items-center justify-center px-12 py-6 rounded-full bg-white/5 backdrop-blur-2xl border border-secondary-fixed-dim/50 text-secondary-fixed-dim font-label-sm text-label-sm font-bold tracking-widest hover:bg-white/10 hover:shadow-[0_0_40px_rgba(0,219,233,0.4)] hover:border-secondary-fixed-dim hover:-translate-y-1 transition-all duration-500 group shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+                                Start Your Masterpiece
+                                <span class="material-symbols-outlined ml-4 group-hover:translate-x-2 transition-transform duration-500 text-xl"
+                                        style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+                        </button>
+                </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-white/5 backdrop-blur-3xl w-full py-20 md:py-32 border-t border-white/10 relative z-10">
+                <div
+                        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                        <div class="col-span-1 md:col-span-2 flex flex-col justify-between">
+                                <div>
+                                        <a class="font-headline-lg-mobile text-headline-lg-mobile font-black text-on-surface mb-6 block tracking-tighter"
+                                                href="index.html">Nexlify</a>
+                                        <p
+                                                class="font-body-md text-body-md text-tertiary-fixed-dim max-w-sm mb-12 font-light leading-relaxed">
+                                                Crafted for the future. An exclusive digital atelier for brands that
+                                                demand perfection.
+                                        </p>
+                                </div>
+                                <p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">
+                                        &copy; 2024 Nexlify Digital Atelier. All rights reserved. Crafted for the
+                                        future.
+                                </p>
+                        </div>
+                        <div class="col-span-1 flex flex-col gap-6">
+                                <span
+                                        class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-widest uppercase mb-2 font-bold drop-shadow-[0_0_8px_rgba(0,219,233,0.3)]">Navigation</span>
+                                <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-secondary-fixed-dim transition-all duration-300 hover:translate-x-1"
+                                        href="index.html">Work</a>
+                                <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-secondary-fixed-dim transition-all duration-300 hover:translate-x-1"
+                                        href="services.html">Services</a>
+                                <a class="font-body-md text-body-md text-secondary-fixed-dim font-bold hover:text-tertiary-fixed-dim transition-all duration-300 hover:translate-x-1 drop-shadow-[0_0_5px_rgba(0,219,233,0.5)]"
+                                        href="about.html">About Me</a>
+                                <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-secondary-fixed-dim transition-all duration-300 hover:translate-x-1"
+                                        href="contact.html">Contact</a>
+                        </div>
+                        <div class="col-span-1 flex flex-col gap-6">
+                                <span
+                                        class="font-label-sm text-label-sm text-tertiary-fixed-dim tracking-widest uppercase mb-2 font-bold drop-shadow-[0_0_8px_rgba(229,180,255,0.3)]">Legal</span>
+                                <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-tertiary-fixed-dim transition-all duration-300 hover:translate-x-1"
+                                        href="#">Privacy</a>
+                                <a class="font-body-md text-body-md text-on-surface-variant font-medium hover:text-tertiary-fixed-dim transition-all duration-300 hover:translate-x-1"
+                                        href="#">Terms</a>
+                        </div>
+                </div>
+                </div>
+        </footer>
+
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                        const closeMenuBtn = document.getElementById('close-menu-btn');
+                        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+                        if (mobileMenuBtn && closeMenuBtn && mobileMenuOverlay) {
+                                mobileMenuBtn.addEventListener('click', () => {
+                                        mobileMenuOverlay.classList.remove('translate-x-full');
+                                });
+                                closeMenuBtn.addEventListener('click', () => {
+                                        mobileMenuOverlay.classList.add('translate-x-full');
+                                });
+                        }
+                });
+        </script>
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                        const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                                entry.target.classList.add('visible');
+                                                observer.unobserve(entry.target);
+                                        }
+                                });
+                        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+                        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+                });
+        </script>
+        <!-- Mobile Menu Overlay -->
+        <div class="fixed inset-0 z-[60] bg-background/80 backdrop-blur-3xl flex flex-col p-margin-mobile transition-all duration-500 translate-x-full"
+                id="mobile-menu-overlay">
+                <div class="flex justify-between items-center mb-12">
+                        <div class="font-display-xl text-headline-lg tracking-tighter text-primary">NEXLIFY</div>
+                        <button class="text-primary hover:text-secondary p-2 hover:bg-white/10 rounded-lg"
+                                id="close-menu-btn">
+                                <span class="material-symbols-outlined">close</span>
+                        </button>
+                </div>
+                <nav class="flex flex-col gap-8">
+                        <a class="text-2xl font-display-xl-mobile text-on-surface hover:text-secondary-fixed transition-colors"
+                                href="index.html">Work</a>
+                        <a class="text-2xl font-display-xl-mobile text-on-surface hover:text-secondary-fixed transition-colors"
+                                href="services.html">Services</a>
+                        <a class="text-2xl font-display-xl-mobile text-on-surface hover:text-secondary-fixed transition-colors"
+                                href="about.html">About Me</a>
+                        <a class="text-2xl font-display-xl-mobile text-on-surface hover:text-secondary-fixed transition-colors"
+                                href="contact.html">Contact</a>
+                </nav>
+                <div class="mt-auto">
+                        <a class="inline-flex items-center justify-center w-full px-6 py-4 rounded-full bg-gradient-to-r from-secondary-fixed-dim to-tertiary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm uppercase shadow-[0_0_20px_rgba(0,219,233,0.3)]"
+                                href="#">Inquire Now</a>
+                </div>
+        </div>
+</body>
+
+</html>
